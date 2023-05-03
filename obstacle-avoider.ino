@@ -1,5 +1,5 @@
 #include "constants.h"
-#include "obstacle-avoider.cpp"
+#include "obstacle-avoider/obstacle-avoider.cpp"
 #include <Arduino.h>
 
 ObstacleAvoider *obstacle_avoider;
