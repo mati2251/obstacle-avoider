@@ -16,12 +16,12 @@ void setup()
   DistanceSensorControler *front_sensor = new DistanceSensorControler(TRIG, ECHO);
   sensors = new SensorsControler(left_sensor, right_sensor, front_sensor);
   obstacle_avoider = new ObstacleAvoider(chasis, sensors);
-  chasis->speed_control(200);
-  chasis->start();
+  pinMode(LED_BUILTIN, OUTPUT);
+  digitalWrite(LED_BUILTIN, LOW);
 }
 
 void loop()
 {
   obstacle_avoider->ride();
-  delay(100);
+  delay(10);
 }

@@ -1,5 +1,4 @@
 #include "distance-sensor-controler/distance-sensor-controler.cpp"
-#define DANGER_OBSTACLE_DISTANCE 20
 
 class SensorsControler
 {
@@ -21,11 +20,11 @@ public:
 
     bool check_left_obstacle()
     {
-        return left_sensor->get_distance_in_cm() < 15;
+        return left_sensor->get_distance_in_cm() < 10;
     };
 
     bool check_right_obstacle()
     {
-        return right_sensor->get_distance_in_cm() < 15;
+        return right_sensor->get_distance_in_cm() < 10;
     };
 };

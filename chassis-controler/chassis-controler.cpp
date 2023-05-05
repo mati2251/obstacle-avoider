@@ -46,8 +46,9 @@ public:
 
     void speed_control(int speed){
         this->speed = speed;
+        int right_speed = speed * 235/255;
         left_wheel->speed_control(this->speed);
-        right_wheel->speed_control(this->speed);
+        right_wheel->speed_control(right_speed);
     };
 
     void config(){
